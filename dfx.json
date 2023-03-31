@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "CalcDay1_backend": {
+      "main": "src/CalcDay1_backend/main.mo",
+      "type": "motoko"
+    },
+    "CalcDay1_frontend": {
+      "dependencies": [
+        "CalcDay1_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/CalcDay1_frontend/src/index.html"
+      },
+      "source": [
+        "src/CalcDay1_frontend/assets",
+        "dist/CalcDay1_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
