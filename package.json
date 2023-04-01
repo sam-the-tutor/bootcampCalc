@@ -5,7 +5,6 @@
   "keywords": ["Internet Computer", "Motoko", "JavaScript", "Canister"],
   "scripts": {
     "build": "webpack",
-    "prebuild": "npm run generate",
     "start": "webpack serve --mode development --env development",
     "prestart": "npm run generate",
     "generate": "dfx generate CalcDay1_backend"

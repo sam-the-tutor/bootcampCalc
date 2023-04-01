@@ -8,17 +8,117 @@
     <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
+  <style>
+body {
+    margin: 0;
+    background: radial-gradient(#e6a970,#00ffff, orange)no-repeat fixed;
+    padding: 50px 0px;
+}
+button.clear {
+    background: #FF5722;
+    color: #fff;
+}
+table {
+    background: black;
+    padding: 7px 5px;
+    border: 6px solid #00000000;
+    text-align: center;
+    padding-bottom: 0px;
+    box-shadow: 0px 0px 27px #0d5569;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+button.equal {
+    width: 88%;
+    background: #210b04;
+}
+button.equal:hover{
+  background: #000803;
+}
+
+span{
+  color: red;
+}
+input[type="text"] {
+    width: 450px;
+    height: 81px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-size: 29px;
+    background: #000000;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: cursive;
+    margin-top: 10px;
+    color: #dedede;
+    border-bottom: 2px solid #cc4014;
+}
+button {
+    padding: 10px 20px;
+    width: 100px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: cursive;
+    background: #000803;
+    border: none;
+    color: #d23200;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+  background: #210b04;
+}
+</style>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+    <main id="calc">
+
+      <table align="center">
+
+        <tr>
+          <div>
+          <td colspan="2"><span id="result">loading....</span>
+          <td colspan="2"><input type="text" id="inputValue" placeholder="000" style="text-align:right; width: 150px;"> </td>
+        </div>
+        </tr>
+
+        <tr>
+          <td><button type="button" id="root"> &radic; </button> </td>
+          <td><button type="button" id="power"> x<sup>n </button> </td>
+          <td><button type="button" id="floor"> floor </button> </td>
+          <td colspan="2">
+           <button type="button" id="reset" class="clear"> Reset </button>
+         </td>
+        </tr>
+
+        <tr>
+          <td><button type="button"  class = "number" id="1"> 1 </button> </td>
+          <td><button type="button"  class = "number" id="2"> 2 </button> </td>
+          <td><button type="button" class = "number" id="3"> 3 </button> </td>
+          <td><button type="button" id="plus"> + </button> </td>
+        </tr>
+
+        <tr>
+          <td><button type="button" class = "number" id="4"> 4 </button> </td>
+          <td><button type="button" class = "number" id="5"> 5 </button> </td>
+          <td><button type="button" class = "number" id="6"> 6 </button> </td>
+          <td><button type="button" id="multiply" > * </button> </td>
+        </tr>
+
+        <tr>
+          <td><button type="button" class = "number" id="7"> 7</button> </td>
+          <td><button type="button" class = "number" id="8"> 8 </button> </td>
+          <td><button type="button" class = "number" id="9"> 9 </button> </td>
+          <td><button type="button" id="divide"> / </button> </td>
+        </tr>
+
+        <tr>
+          <td colspan="3"><button type="button" class = "number" id="0"> 0 </button> </td>
+          <td colspan="1"><button type="button" id="subtract"> - </button> </td>
+        </tr>
+
+      </table>
     </main>
   </body>
 </html>
