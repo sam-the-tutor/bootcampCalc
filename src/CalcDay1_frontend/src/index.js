@@ -23,6 +23,7 @@ document.querySelector("#calc")
 
 
 
+
 //perform addition
 document.querySelector("#plus")
 .addEventListener("click", async (e) =>{
@@ -40,13 +41,12 @@ document.querySelector("#plus")
 document.querySelector("#subtract")
 .addEventListener("click", async () =>{
   
-  const num = parseFloat(document.getElementById("#inputValue").value)
-  console.log("sub num:",num)
+  const num = parseFloat(document.getElementById("inputValue").value)
               
   //call the sub method of the canister
-  //const Result = await CalcDay1_backend.sub(num)
+  const Result = await CalcDay1_backend.sub(num)
 
- // document.getElementById("result").innerHTML = Result
+ document.getElementById("result").innerHTML = Result
 
 })
 
