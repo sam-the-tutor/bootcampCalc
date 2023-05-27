@@ -3,7 +3,7 @@ import Float "mo:base/Float";
 actor CALCULATOR {
 
   //declare and initialize a variable counter of type Float
-  var counter : Float = 0.0;
+  var counter : Float = 0;
 
   //add the number from user to the counter
   public func add(num : Float) : async Float {
@@ -57,12 +57,18 @@ actor CALCULATOR {
 
   //reset the input number by the counter
   public func reset() : async () {
-    counter := 0.0;
+    counter := 0;
   };
 
   //see the input number by the counter
   public query func see() : async Float{
     return counter;
+  };
+
+// test function for the motko extensions and prettier
+  public func addMe(s : Nat) : async Text{
+    return "Samuel is now working very hard to be well";
+
   };
 
 };
